@@ -1,0 +1,7 @@
+/dist/
+/.vitest-cache/
+/tests/output/
+/.yarn/cache/
+/.yarn/install-state.gz
+/.yarn/unplugged/
+/sharp-main
