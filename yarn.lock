@@ -5,6 +5,17 @@ __metadata:
   version: 10
   cacheKey: 10c0
 
+"@andrekr/imglib@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@andrekr/imglib@workspace:."
+  dependencies:
+    "@types/node": "npm:22.10.2"
+    sharp: "npm:^0.33.5"
+    typescript: "npm:5.7.2"
+    vitest: "npm:2.1.8"
+  languageName: unknown
+  linkType: soft
+
 "@emnapi/runtime@npm:^1.2.0":
   version: 1.11.2
   resolution: "@emnapi/runtime@npm:1.11.2"
@@ -911,17 +922,6 @@ __metadata:
   checksum: 10c0/386d011a553e02bc594ac2ca0bd6d9e4c22d7fa8cfbfc448a6d148c59ea881b092db9dbe3547ae4b88e55f1b01f7c4a2ecc53b310c042793e63aa44cf6c257f2
   languageName: node
   linkType: hard
-
-"imglib@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "imglib@workspace:."
-  dependencies:
-    "@types/node": "npm:22.10.2"
-    sharp: "npm:^0.33.5"
-    typescript: "npm:5.7.2"
-    vitest: "npm:2.1.8"
-  languageName: unknown
-  linkType: soft
 
 "is-arrayish@npm:^0.3.1":
   version: 0.3.4

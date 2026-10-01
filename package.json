@@ -1,15 +1,27 @@
 {
-  "name": "imglib",
-  "version": "0.0.0",
+  "name": "@andrekr/imglib",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "André Hänsel",
   "description": "A TypeScript image library backed by sharp",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "node scripts/clean.mjs && tsc -p tsconfig.build.json",
+    "prepack": "yarn run build",
     "test": "vitest run",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
