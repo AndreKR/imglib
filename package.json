@@ -1,9 +1,18 @@
 {
   "name": "@andrekr/imglib",
-  "version": "0.1.0",
+  "version": "0.1.1",
+    "private": true,
   "license": "MIT",
   "author": "André Hänsel",
   "description": "A TypeScript image library backed by sharp",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/AndreKR/imglib.git"
+    },
+    "homepage": "https://github.com/AndreKR/imglib#readme",
+    "bugs": {
+      "url": "https://github.com/AndreKR/imglib/issues"
+    },
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -20,8 +29,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "node scripts/clean.mjs && tsc -p tsconfig.build.json",
-    "prepack": "yarn run build",
+    "build": "node scripts/clean.mjs && tsc -p tsconfig.build.json && node scripts/prepare-package.mjs",
+    "release": "yarn run build && npm publish ./dist",
     "test": "vitest run",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
